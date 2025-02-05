@@ -4,162 +4,287 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Netflix India – Watch TV Shows Online, Watch Movies Online</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@400;600&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <div class="main">
-        <nav>
-            <span><img src="assets/images/logo.svg"></span>
-            <div>
-                <button class="btn">English</button>
-                <button class="btn btn-red-sm">Sign In</button>
+        <nav class="navbar navbar-expand-sm">
+            <div class="container-fluid">
+                <a class="navbar-brand ms-5" href="#">
+                    <img src="assets/images/logo.svg" alt="Logo" style="width:100px;">
+                </a>
+                <button class="navbar-toggler" id="toggle-btn" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">Sign In</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link btn dropdown-toggle border text-white" href="#" role="button"
+                                data-bs-toggle="dropdown">English</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item active" href="#">English</a></li>
+                                <li><a class="dropdown-item" href="#">Hindi</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
-        <div class="box"></div>
 
-        <div class="hero">
-            <span>Unlimited movies, TV shows and more Starts at ₹149.</span>
-            <span>Cancel at any time.</span>
-            <span>Ready to watch? Enter your email to create or restart your membership.</span>
-            <div class="mail-btn">
-                <input type="email" placeholder="Email Address" name="" id="">
-                <button class="btn btn-red">Get Started &gt;</button>
+        <div class="box"></div>
+        <div class="home-container">
+            <div class="container-md mb-3 text-center text-white" id="hero-1">
+                <p>Unlimited movies, TV shows and more Starts at ₹149.
+                    <br>
+                    Cancel at any time.
+                    <br>
+                    Ready to watch? Enter your email to create or restart your membership.
+                </p>
+            </div>
+
+            <div class="container-md mt-3" id="hero-2">
+                <form id="myForm">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" placeholder="Enter email" name="email" id="email"
+                                required>
+                            <span id="email-error" style="color: red; display: none;">Please enter a valid email
+                                address.</span>
+                        </div>
+                        <div class="col-md-3">
+                            <button type="submit" class="btn btn-danger">Get Started &gt;</button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
-        <div class="seperator"></div>
+
     </div>
 
-    <section class="first">
-        <div>
-            <span>Enjoy on your TV</span>
-            <span>Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</span>
-        </div>
+    <div class="seperator"></div>
 
-        <div class="secImg">
-            <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png" alt="">
-            <video src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-in-0819.m4v"
-                autoplay loop muted></video>
+
+    <section class="first container py-5">
+        <div class="row align-items-center text-center text-md-start">
+
+            <!-- Left Text Section -->
+            <div class="col-md-6">
+                <h1 class="fw-bold">Enjoy on your TV</h1>
+                <p class="fs-5">Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.
+                </p>
+            </div>
+
+            <!-- Right Image & Video Section -->
+            <div class="col-md-6 position-relative secImg">
+                <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png"
+                    class="img-fluid" alt="TV">
+                <video
+                    src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-in-0819.m4v"
+                    autoplay loop muted class="video-overlay"></video>
+            </div>
+
         </div>
     </section>
+
+    <!-- Separation Divider -->
     <div class="separation"></div>
 
-    <section class="first second">
-
-        <div class="secImg">
-            <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile-0819.jpg" alt="">
-
-        </div>
-        <div>
-            <span>Download your shows to watch offline</span>
-            <span>Save your favourites easily and always have something to watch.</span>
-        </div>
-    </section>
-
-    <div class="separation"></div>
-    <section class="first third">
-        <div>
-            <span>Watch everywhere</span>
-            <span>Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</span>
-        </div>
-
-        <div class="secImg">
-            <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png" alt="">
-            <video src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices-in.m4v"
-                autoplay loop muted></video>
-        </div>
-    </section>
-    <div class="separation"></div>
-
-
-    <section class="first second">
-
-        <div class="secImg">
-            <img src="https://occ-0-2849-3646.1.nflxso.net/dnm/api/v6/19OhWN2dO19C9txTON9tvTFtefw/AAAABVr8nYuAg0xDpXDv0VI9HUoH7r2aGp4TKRCsKNQrMwxzTtr-NlwOHeS8bCI2oeZddmu3nMYr3j9MjYhHyjBASb1FaOGYZNYvPBCL.png?r=54d"
-                alt="">
-
-        </div>
-        <div>
-            <span>Create profiles for kids</span>
-            <span>Send children on adventures with their favourite characters in a space made just for them—free with
-                your membership.</span>
+    <!-- Section 1: Download Shows -->
+    <section class="container py-5">
+        <div class="row align-items-center text-center text-md-start">
+            <div class="col-md-6 secImg">
+                <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile-0819.jpg"
+                    class="img-fluid" alt="">
+            </div>
+            <div class="col-md-6">
+                <h2 class="fw-bold">Download your shows to watch offline</h2>
+                <p class="fs-5">Save your favourites easily and always have something to watch.</p>
+            </div>
         </div>
     </section>
 
     <div class="separation"></div>
 
-    <section class="faq">
-        <h2>Frequently Asked Questions</h2>
-        <div class="faqbox">
-            <span>What is NetFlix</span>
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 4V20" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                <path d="M4 12H20" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-
+    <!-- Section 2: Watch Everywhere -->
+    <section class="container py-5">
+        <div class="row align-items-center text-center text-md-start flex-md-row-reverse">
+            <div class="col-md-6 secImg position-relative">
+                <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png"
+                    class="img-fluid" alt="">
+                <video
+                    src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices-in.m4v"
+                    autoplay loop muted class="video-overlay"></video>
+            </div>
+            <div class="col-md-6">
+                <h2 class="fw-bold">Watch everywhere</h2>
+                <p class="fs-5">Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</p>
+            </div>
         </div>
-        <div class="faqbox">
+    </section>
+
+    <div class="separation"></div>
+
+    <!-- Section 3: Kids Profiles -->
+    <section class="container py-5">
+        <div class="row align-items-center text-center text-md-start">
+            <div class="col-md-6 secImg">
+                <img src="https://occ-0-2849-3646.1.nflxso.net/dnm/api/v6/19OhWN2dO19C9txTON9tvTFtefw/AAAABVr8nYuAg0xDpXDv0VI9HUoH7r2aGp4TKRCsKNQrMwxzTtr-NlwOHeS8bCI2oeZddmu3nMYr3j9MjYhHyjBASb1FaOGYZNYvPBCL.png?r=54d"
+                    class="img-fluid" alt="">
+            </div>
+            <div class="col-md-6">
+                <h2 class="fw-bold">Create profiles for kids</h2>
+                <p class="fs-5">Send children on adventures with their favourite characters in a space made just for
+                    them—free with your membership.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="separation"></div>
+
+    <div class="container mt-5 faqCont">
+        <div class="faq-box" onclick="toggleFAQ('faqContent1', 'toggleIcon1')">
+            <span>What is Netflix?</span>
+            <span class="icon" id="toggleIcon1">+</span>
+        </div>
+        <div class="faq-content" id="faqContent1">
+            Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime,
+            documentaries, and more.
+        </div>
+
+        <div class="faq-box" onclick="toggleFAQ('faqContent2', 'toggleIcon2')">
             <span>How much does Netflix cost?</span>
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 4V20" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                <path d="M4 12H20" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-
+            <span class="icon" id="toggleIcon2">+</span>
         </div>
-        <div class="faqbox">
-            <span>What can I watch on Netflix?</span>
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 4V20" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                <path d="M4 12H20" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-
+        <div class="faq-content" id="faqContent2">
+            Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for a fixed monthly
+            fee.
         </div>
-        <div class="faqbox">
+
+        <div class="faq-box" onclick="toggleFAQ('faqContent3', 'toggleIcon3')">
             <span>Where can I watch?</span>
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 4V20" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                <path d="M4 12H20" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-
+            <span class="icon" id="toggleIcon3">+</span>
         </div>
-    </section>
-    <div class="separation"></div>
-
-    <footer>
-        <div class="questions">
-            Questions? Call 000-800-919-1694
+        <div class="faq-content" id="faqContent3">
+            Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the web at netflix.com.
         </div>
-        <div class="footer">
-            <div class="footer-item"> 
-                <a href="faq">Investor Relations</a>
-                <a href="faq">Jobs</a>
-                <a href="faq">Ways to Watch</a>
-                <a href="faq">Terms of Use</a>
+
+        <div class="faq-box" onclick="toggleFAQ('faqContent4', 'toggleIcon4')">
+            <span>How do I cancel?</span>
+            <span class="icon" id="toggleIcon4">+</span>
+        </div>
+        <div class="faq-content" id="faqContent4">
+            Netflix is flexible. There are no contracts and no commitments. You can cancel anytime online.
+        </div>
+
+        <div class="faq-box" onclick="toggleFAQ('faqContent5', 'toggleIcon5')">
+            <span>What can I watch on Netflix?</span>
+            <span class="icon" id="toggleIcon5">+</span>
+        </div>
+        <div class="faq-content" id="faqContent5">
+            Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning Netflix
+            originals, and more.
+        </div>
+    </div>
+
+    <div class="seperation"></div>
+
+    <footer class="bg-black text-white py-5">
+        <div class="container">
+            <div class="questions text-center text-md-start mb-4">
+                <p>Questions? Call <a href="tel:0008009191694"
+                        class="text-white text-decoration-none">000-800-919-1694</a></p>
             </div>
 
-            <div class="footer-item"> 
-                <a href="faq">Help Centre</a>
-                <a href="faq">Account</a>
-                <a href="faq">Speed Test</a>
-                <a href="faq">Legal Notices</a>
-            </div>
-            <div class="footer-item">
-                <a href="faq">Media Centre</a>
-                <a href="faq">Privacy</a>
-                <a href="faq">Cookie Preferences</a> 
-                <a href="faq">Corporate</a>
-            </div>
+            <div class="row text-center text-md-start">
+                <div class="col-6 col-md-3 mb-3">
+                    <a href="#" class="d-block text-white text-decoration-none">Investor Relations</a>
+                    <a href="#" class="d-block text-white text-decoration-none">Jobs</a>
+                    <a href="#" class="d-block text-white text-decoration-none">Ways to Watch</a>
+                    <a href="#" class="d-block text-white text-decoration-none">Terms of Use</a>
+                </div>
 
-            <div class="footer-item">
-                <a href="faq">Contact Us</a>
-                <a href="faq">Speed Test</a> 
-                <a href="faq">Legal Notices</a> 
-                <a href="faq">Only on Netflix</a>
+                <div class="col-6 col-md-3 mb-3">
+                    <a href="#" class="d-block text-white text-decoration-none">Help Centre</a>
+                    <a href="#" class="d-block text-white text-decoration-none">Account</a>
+                    <a href="#" class="d-block text-white text-decoration-none">Speed Test</a>
+                    <a href="#" class="d-block text-white text-decoration-none">Legal Notices</a>
+                </div>
+
+                <div class="col-6 col-md-3 mb-3">
+                    <a href="#" class="d-block text-white text-decoration-none">Media Centre</a>
+                    <a href="#" class="d-block text-white text-decoration-none">Privacy</a>
+                    <a href="#" class="d-block text-white text-decoration-none">Cookie Preferences</a>
+                    <a href="#" class="d-block text-white text-decoration-none">Corporate</a>
+                </div>
+
+                <div class="col-6 col-md-3 mb-3">
+                    <a href="#" class="d-block text-white text-decoration-none">Contact Us</a>
+                    <a href="#" class="d-block text-white text-decoration-none">Speed Test</a>
+                    <a href="#" class="d-block text-white text-decoration-none">Legal Notices</a>
+                    <a href="#" class="d-block text-white text-decoration-none">Only on Netflix</a>
+                </div>
             </div>
         </div>
     </footer>
+
+    <script>
+        // JavaScript for form submission and validation
+        document.getElementById('myForm').addEventListener('submit', function (event) {
+            event.preventDefault();  // Prevent the form from submitting immediately
+
+            var emailInput = document.getElementById('email');
+            var emailError = document.getElementById('email-error');
+
+            // Email validation: Check if it matches a simple email regex pattern
+            var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            if (emailPattern.test(emailInput.value)) {
+                emailError.style.display = 'none';  // Hide error if email is valid
+
+                // Form submission logic (you can send the data or submit to server here)
+                alert('Form submitted successfully!');
+                // Here, you can actually submit the form programmatically if needed:
+                // this.submit();  // Uncomment this to submit the form after validation
+
+            } else {
+                emailError.style.display = 'block';  // Show error if email is invalid
+            }
+        });
+    </script>
+
+    <script>
+        function toggleFAQ(contentId, iconId) {
+            let content = document.getElementById(contentId);
+            let icon = document.getElementById(iconId);
+
+            if (content.style.display === "none" || content.style.display === "") {
+                content.style.display = "block";
+                icon.classList.add("rotate");
+                icon.textContent = "×";
+            } else {
+                content.style.display = "none";
+                icon.classList.remove("rotate");
+                icon.textContent = "+";
+            }
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+        </script>
+
 </body>
 
 </html>
